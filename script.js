@@ -1,23 +1,23 @@
 function calculate(){
     //armazena o valor retirado do input (formato String)
-    const dateValue = document.getElementById('date').value.trim()
+    let dateValue = document.getElementById('date').value.trim()
     
     //limpa o - da String e transforma num vetor tipo String de três posições
     //dateParts = ["aaaa", "mm", "dd"];
-    const dateParts = dateValue.split('-')
+    let dateParts = dateValue.split('-')
 
     //converte os elementos de cada posição do vetor para inteiro em base 10
-    const year = parseInt(dateParts[0], 10)
-    const month = parseInt(dateParts[1], 10)
-    const day = parseInt(dateParts[2], 10)
+    let year = parseInt(dateParts[0], 10)
+    let month = parseInt(dateParts[1], 10)
+    let day = parseInt(dateParts[2], 10)
     
     //pegar data atual 
-    const currentDayOfYear = new Date()
+    let currentDayOfYear = new Date()
 
     //separa em ano, mês e dia através dos métodos
-    const currentYear = currentDayOfYear.getFullYear()
-    const currentMonth = currentDayOfYear.getMonth() + 1 
-    const currentDay = currentDayOfYear.getDate()
+    let currentYear = currentDayOfYear.getFullYear()
+    let currentMonth = currentDayOfYear.getMonth() + 1 
+    let currentDay = currentDayOfYear.getDate()
 
     //calcula as diferenças
     let years = currentYear - year
